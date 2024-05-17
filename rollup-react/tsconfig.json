@@ -18,7 +18,7 @@
     // 强制保持文件名的大小写一致性
     "forceConsistentCasingInFileNames": true,
     // 指定模块解析策略为 Bundler，表示使用打包工具来解析模块路径
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node",
     // 允许导入 JSON 文件作为模块
     "resolveJsonModule": true,
     // 禁止 TypeScript 编译器生成任何 JavaScript 文件
