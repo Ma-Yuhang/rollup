@@ -1,0 +1,14 @@
+.app-containter {
+  .btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #555;
+    }
+  }
+}
