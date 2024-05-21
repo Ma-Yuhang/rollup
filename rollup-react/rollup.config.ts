@@ -9,11 +9,12 @@ import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 import clear from 'rollup-plugin-clear'
 import postcss from 'rollup-plugin-postcss'
-import image from '@rollup/plugin-image'
+// import image from '@rollup/plugin-image'
+import image from './plugins/rollup-plugin-image'
 import alias from '@rollup/plugin-alias'
 import terser from '@rollup/plugin-terser'
 import { fileURLToPath } from 'node:url'
-import { visualizer } from "rollup-plugin-visualizer";
+import { visualizer } from 'rollup-plugin-visualizer'
 
 const config: RollupOptions = {
   input: 'src/main.tsx',
@@ -27,12 +28,14 @@ const config: RollupOptions = {
     // manualChunks: {
     //   react: ['react', 'react-dom'],
     // },
-    plugins: [terser({
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    })],
+    plugins: [
+      terser({
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+      }),
+    ],
     globals: {
       react: 'React',
       'react-dom': 'ReactDOM',

@@ -15,6 +15,7 @@
     "jsx": "preserve",
     // 跳过对引用库的类型检查
     "skipLibCheck": true,
+    "noImplicitAny": false,
     // 强制保持文件名的大小写一致性
     "forceConsistentCasingInFileNames": true,
     // 指定模块解析策略为 Bundler，表示使用打包工具来解析模块路径

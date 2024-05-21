@@ -1,7 +1,8 @@
 import React, { FC, useState, lazy, Suspense } from 'react'
 import './styles/app.scss'
 import './App.css'
-import image from '@/assets/11.png'
+import png from '@/assets/react.png'
+import svg from '@/assets/rollup.svg'
 import Loading from '@/components/Loading'
 const About = lazy(() => delay(import('@/components/About'), 2000))
 const App: FC = () => {
@@ -12,7 +13,8 @@ const App: FC = () => {
   return (
     <div className='app-containter'>
       <h2 className="title">hello1</h2>
-      <img src={image} style={{width: '200px'}}/>
+      <img src={png} style={{width: '200px'}}/>
+      <img src={svg} style={{width: '200px'}}/>
       <button className='btn' onClick={() => setN(n + 1)}>
         n: {n}
       </button>
