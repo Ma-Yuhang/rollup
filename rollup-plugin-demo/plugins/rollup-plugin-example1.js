@@ -25,5 +25,25 @@ export default function example1() {
     buildEnd() {
       console.log('buildEnd')
     },
+    outputOptions(outputOptions) {
+      console.log("outputOptions--->outputOptions", outputOptions);
+    },
+    // banner() {
+
+    // },
+    // renderChunk() {
+
+    // },
+    // augmentChunkHash() {
+      
+    // }
+    // generateBundle(options, bundle) {
+    //   console.log("generateBundle--->options", options);
+    //   console.log("generateBundle--->bundle", bundle);
+    // }
+    writeBundle(options, bundle) {
+      console.log("writeBundle--->options", options);
+      console.log("writeBundle--->bundle", bundle);
+    }
   }
 }
