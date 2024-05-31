@@ -3,9 +3,13 @@ import nodeResolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import babel from '@rollup/plugin-babel'
 import typescript from '@rollup/plugin-typescript'
+import clear from './plugins/rollup-plugin-clear'
 
 const config: RollupOptions = {
-  input: 'src/index.ts',
+  input: {
+    main: 'src/main.ts',
+    'index/haha': 'src/index.ts', 
+  },
   output: {
     dir: 'dist',
     format: 'esm', // 输出格式为ES模块
@@ -31,6 +35,10 @@ const config: RollupOptions = {
       extensions: ['.js', '.ts'],
     }),
     typescript(),
+    clear({
+      targets: ['dist'],
+      watch: true
+    })
   ],
 }
 export default config
